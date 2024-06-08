@@ -1,10 +1,11 @@
+import { Link } from "react-router-dom";
 import prime from "../images/prime.jpg";
 
 const Signin = () => {
     return (
         <div className="flex flex-col items-center justify-center">
             <img src={prime} className="w-52 h-36" />
-            <div className="p-6 border border-gray-300">
+            <div className="p-6 border border-gray-300 rounded-lg">
                 <h1 className="text-2xl font-medium">Sginin</h1>
                 <label className="font-semibold">メールアドレスか電話番号を入力してください</label>
                 <input type="text" className="border mt-4 border-gray-800 text-gray-900 text-sm rounded-lg block w-80 h-9 p-2.5" required />
@@ -17,9 +18,11 @@ const Signin = () => {
             <h1 className="text-center mt-4 text-gray-400 text-sm">
                 アカウントを作成しますか？
             </h1>
-            <button className="mt-2 h-9 w-80 border shadow-lg border-gray-400 hover:bg-yellow-400 font-medium rounded-lg text-sm">
-                新規アカウント作成
-            </button>
+            <Link to="/signup">
+                <button className="mt-2 h-9 w-80 border shadow-lg border-gray-400 hover:bg-yellow-400 font-medium rounded-lg text-sm">
+                    新規アカウント作成
+                </button>
+            </Link>
         </div>
     )
 }
