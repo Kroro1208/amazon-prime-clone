@@ -1,8 +1,9 @@
 import './App.css';
+import Signin from './components/Signin';
 
 function App() {
   return (
-    <div className='text-5xl text-red-400'>App</div>
+    <Signin />
   );
 }
 
